@@ -1,0 +1,21 @@
+name = "rutabaga"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+# Workers + Assets: serves the built SPA from ./dist
+# The worker itself handles API routes; everything else falls through to the static assets
+main = "src/worker.ts"
+
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+# Serve index.html for any unmatched path (SPA fallback)
+not_found_handling = "single-page-application"
+
+# [vars]
+# MY_VAR = "my-value"
+
+# Uncomment to add a KV namespace, D1 database, R2 bucket, etc.
+# [[kv_namespaces]]
+# binding = "MY_KV"
+# id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
