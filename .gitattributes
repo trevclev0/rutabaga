@@ -2,7 +2,7 @@
 * text=auto eol=lf
 
 # Ensure the Yarn cache and releases are always treated as binary
-*.zip binary
-.yarn/cache/*.zip binary
-.yarn/releases/*.cjs binary
+.yarn/cache/** binary
+.yarn/releases/** binary
+.yarn/plugins/** binary
 .pnp.* binary
