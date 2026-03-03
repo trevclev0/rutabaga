@@ -1,0 +1,4 @@
+# Ensure the Yarn cache and releases are always treated as binary
+.yarn/cache/*.zip binary
+.yarn/releases/*.cjs binary
+.pnp.* binary
