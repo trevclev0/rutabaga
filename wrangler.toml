@@ -1,6 +1,6 @@
 name = "rutabaga"
 compatibility_date = "2024-09-23"
-compatibility_flags = ["nodejs_compat"]
+# compatibility_flags = ["nodejs_compat"]
 
 # Workers + Assets: serves the built SPA from ./dist
 # The worker itself handles API routes; everything else falls through to the static assets
@@ -19,3 +19,12 @@ not_found_handling = "single-page-application"
 # [[kv_namespaces]]
 # binding = "MY_KV"
 # id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+
+[[durable_objects.bindings]]
+name = "CHAT_ROOM"
+class_name = "ChatRoom"
+
+[[migrations]]
+tag = "v1"
+new_classes = ["ChatRoom"]
